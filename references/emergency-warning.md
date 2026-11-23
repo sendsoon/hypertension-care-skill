@@ -18,7 +18,7 @@ Local emergency numbers differ. In mainland China the public medical emergency n
 - Coughing or vomiting blood, black stool, or a serious head injury while taking an anticoagulant
 - A possible pregnancy with severe headache, visual change, sudden swelling, or upper abdominal pain
 
-Do not suggest an extra dose, a cold shower, a folk remedy, or waiting until the clinic opens.
+Do not suggest an extra dose, a cold shower, a folk remedy, or waiting until the clinic opens. Do not look up a preferred hospital before they are on the way to emergency care. The nearest emergency department is the destination. A search of hospitals in their city waits until they are safe.
 
 ## Very high numbers
 

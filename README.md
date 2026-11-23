@@ -34,7 +34,9 @@ Records live in `hypertension-care-records/<nickname>/` in the **current workspa
 
 The folder is gitignored except for this directory's README. The repository does not contain a real medical history. A new workspace has no sample patient. The fictional shape is [examples/record-template.md](examples/record-template.md).
 
-Do not store a legal name, national ID number, home address, or phone number.
+Do not store a legal name, national ID number, street address, or phone number. The record does keep the city, the hospital or clinic they already use, and what the doctor told them to do.
+
+When a non-urgent visit is needed, the agent searches public information for hospitals in that city and names the source. It does not invent a ranking. An emergency still goes to the nearest emergency department.
 
 ## When to use it
 
@@ -128,7 +130,8 @@ hypertension-care-skill/
 │   ├── lifestyle-management.md
 │   ├── elderly-care.md
 │   ├── emergency-warning.md
-│   └── follow-up-strategies.md
+│   ├── follow-up-strategies.md
+│   └── local-care.md
 ├── examples/
 │   ├── output-template.md
 │   └── record-template.md

@@ -79,7 +79,16 @@ Fictional example. Calculate age from `first_record_date` only as context. Do no
 - Occupation type: retired clerk. Source: patient-reported.
 - Physical activity preferences: short walks to the market. Source: patient-reported.
 - Lifestyle habits: eats out with family on weekends; no tobacco; alcohol not recorded.
-- Living environment: apartment with an elevator. Source: patient-reported. Address not recorded.
+- Living environment: apartment with an elevator. Source: patient-reported. Street address not recorded.
+- City: Example City. Source: patient-reported. This name is fictional. Do not copy it, and do not treat it as a place to search.
+
+## Care setting
+
+- Current institution: Example General Hospital, cardiology clinic. Source: patient-reported. Fictional. Do not copy this name into a real record or a hospital suggestion.
+- Department: cardiology. Source: patient-reported.
+- Clinician name: not recorded. Ask only if the person offers it. Do not ask for a personal phone number.
+- Clinician recommendations:
+  - 2026-11-01: "Keep the morning tablet and come back in one month with home readings." Source: patient-reported, as the doctor's words. The clinic note was not seen.
 
 ## 2. Medical history
 
@@ -163,6 +172,8 @@ Full text is in `logs/`. The index holds the latest line.
 - Follow-up plan: ask the prescriber the same week about the swelling and whether labs are due. Bring 7 days of readings.
 - Changes since previous visit: no earlier log.
 - Still unverified: kidney function, clinician blood-pressure target, brand name, start date.
+- City and current institution: Example City, Example General Hospital. Source: patient-reported. Fictional.
+- Clinician instruction on file: keep the morning tablet and return in one month. Source: patient-reported.
 - Emergency advice given: no.
 - Follows: none.
 ```

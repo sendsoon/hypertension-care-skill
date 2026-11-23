@@ -39,6 +39,7 @@ Update the profile only when the fact is confirmed. Keep the series in the logs.
 | Kidney function, electrolytes, glucose, lipids, urine | Safety of ACE inhibitor, ARB, ARNI, diuretic | Clinician-confirmed when from a report; otherwise patient-reported numbers with the date |
 | ECG or echocardiogram conclusions | Heart structure and rhythm | Only what the report said |
 | Clinician's target and any fluid or potassium limit | Stops the skill from importing a population target | Clinician-confirmed only if they are reporting the clinician |
+| City, current hospital or clinic, and what the doctor told them to do | Where they are already treated, and what must not be overwritten by a web search | Patient-reported, unless a document was read |
 | Mood, sleep, falls, who helps with pills | Whether the plan is livable | Patient-reported |
 
 ## Labs and checks to suggest, not to order

@@ -7,9 +7,9 @@ description: >
   travel, and follow-up. Does not diagnose, prescribe, stop, or change doses,
   and does not replace a clinician. Use when the user mentions hypertension,
   blood pressure, home readings, antihypertensive medicines, or 高血压, 血压,
-  降压药, 头晕, 并发症, 随访.
+  降压药, 头晕, 并发症, 随访, 医院.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   license: MIT
   sources_checked: "2026-11-23"
 ---
@@ -38,6 +38,7 @@ Read only the files that change the answer. Paths are from the repository root.
 | Food, salt, drink, activity, sleep, work, travel, or gatherings | [references/lifestyle-management.md](references/lifestyle-management.md) |
 | Age about 65 or older, many medicines, falls, frailty, or memory | [references/elderly-care.md](references/elderly-care.md) |
 | Chest pain, breathlessness, neurological change, fainting, swelling of the mouth or face, or a reading at or above 180 systolic or 120 diastolic | [references/emergency-warning.md](references/emergency-warning.md) first |
+| Where to be seen, the person's city, their current hospital, or what a doctor told them to do | [references/local-care.md](references/local-care.md) |
 | What to measure next, or how to keep a follow-up | [references/follow-up-strategies.md](references/follow-up-strategies.md) |
 | Wording of a reply | [examples/output-template.md](examples/output-template.md) |
 | Creating or editing a record | [examples/record-template.md](examples/record-template.md) |
@@ -81,7 +82,7 @@ A new person chooses the nickname they want to be called. If that folder already
 
 ### Step 2. Read the record
 
-Before advice, read that person's `profile.md`, `index.md`, and the latest log. Note illnesses, current medicines, recent readings, past abnormal events, and the last recommendation.
+Before advice, read that person's `profile.md`, `index.md`, and the latest log. Note illnesses, current medicines, recent readings, past abnormal events, the city, the current hospital or clinic, and the latest clinician instruction.
 
 ### Step 3. Name the question
 
@@ -106,11 +107,13 @@ Separate:
 - A suggestion fitted to this person
 - Unknown or unverified information
 
+When the person needs a place to be seen and there is no emergency, follow [references/local-care.md](references/local-care.md). Search that city's public hospital information in the same turn. Name the source and the search date. Do not call one hospital the best unless the source itself ranks it, and do not invent a ranking, a specialty title, or a success rate. If they already have a hospital, record it and do not urge a switch. For emergency symptoms, send them to the nearest emergency department first. Do not delay that for a hospital search.
+
 ### Step 6. Ask for the missing fact
 
-Ask the single most useful question. Do not send a long form. Typical questions: the current reading, the medicine name, the strength, how often it is taken, another illness, or a new symptom.
+Ask the single most useful question. Do not send a long form. Typical questions: the current reading, the medicine name, the strength, how often it is taken, another illness, a new symptom, the city, the current hospital, or what the doctor last told them to do.
 
-If this person has no profile yet, ask for the nickname they want to be called and their age together. Do not ask for a legal name, national ID, address, or phone number. Do not invent a nickname or a number.
+If this person has no profile yet, ask for the nickname they want to be called and their age together. Do not ask for a legal name, national ID, street address, or phone number. Do not invent a nickname or a number. After those two facts, the next single question is the city when a visit, a hospital, or local follow-up is part of the conversation. Ask which hospital they already use, and what the doctor told them, only when that fact is missing and would change the answer.
 
 ### Step 7. Update the record
 

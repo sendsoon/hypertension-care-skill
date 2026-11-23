@@ -4,7 +4,7 @@ This directory holds hypertension records for the current workspace. Each person
 
 Only this README is meant to be tracked in Git. Profiles, the registry `index.md`, each nickname folder, and everything under `logs/` are ignored. Do not force-add them.
 
-Real records must not contain a legal name, national ID number, home address, or phone number. If a nickname folder already exists and it is unclear whether this is the same person, ask before writing.
+Real records must not contain a legal name, national ID number, street address, or phone number. City, the current hospital or clinic, and the doctor's stated advice may be recorded after the person confirms them. If a nickname folder already exists and it is unclear whether this is the same person, ask before writing.
 
 The fictional shape lives in `examples/record-template.md`.
 

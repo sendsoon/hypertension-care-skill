@@ -34,7 +34,9 @@ WHO、ISH、ESC、AHA/ACC、中国高血压防治指南和 KDIGO 的血压目标
 
 除该目录下的说明文件外，档案和日志已写入 `.gitignore`，不应提交。仓库里没有真实病历。虚构格式见 [examples/record-template.md](examples/record-template.md)。
 
-不要记录真实姓名、身份证号、家庭住址或电话。
+不要记录真实姓名、身份证号、街道住址或电话。档案会记下所在城市、当前就诊机构和医生交代的处置建议。
+
+需要非紧急就诊时，智能体按该城市检索公开的医院信息，并写明来源。它不编造医院排名。急救仍去最近的急诊，不等待检索。
 
 ## 何时使用
 
@@ -121,7 +123,7 @@ hypertension-care-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
-├── references/                       # 指南、药物、合并症、生活、老年、急救、随访
+├── references/                       # 指南、药物、合并症、生活、老年、急救、随访、当地就医
 ├── examples/                         # 回答示例与虚构档案
 └── hypertension-care-records/        # 本地档案，除 README 外不提交
 ```
