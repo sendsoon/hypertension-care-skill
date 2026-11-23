@@ -10,6 +10,10 @@ SKILL.zh-CN.md
 examples/*.zh-CN.md
 references/*.zh-CN.md
 
+# Local agent entries (not published)
+.agents/
+.claude/
+
 # Patient records and consultation logs (never publish)
 # The folder README is the only tracked file. It contains no patient data.
 hypertension-care-records/*

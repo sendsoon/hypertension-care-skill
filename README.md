@@ -42,7 +42,7 @@ Do not use it to choose a drug or a dose, to clear a person for intense exercise
 
 ## How an agent should load it
 
-The root `SKILL.md` is the source of truth. `.agents/skills/hypertension-care-skill/SKILL.md` and `.claude/skills/hypertension-care-skill/SKILL.md` are short pointers so agents that look in those folders still reach the root file and `references/`. They are not a second medical library.
+The root `SKILL.md` is the source of truth. `.agents/skills/hypertension-care-skill/SKILL.md` and `.claude/skills/hypertension-care-skill/SKILL.md` are local pointers so agents that look in those folders still reach the root file and `references/`. They are gitignored and are not part of the published tree.
 
 To use the files inside another agent, copy `SKILL.md`, `references/`, and `examples/` together and keep their relative paths.
 
@@ -84,8 +84,6 @@ hypertension-care-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
-├── .agents/skills/hypertension-care-skill/SKILL.md
-├── .claude/skills/hypertension-care-skill/SKILL.md
 ├── references/
 │   ├── hypertension-guidelines.md
 │   ├── medication-reference.md

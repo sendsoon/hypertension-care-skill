@@ -42,7 +42,7 @@ WHO、ISH、ESC、AHA/ACC、中国高血压防治指南和 KDIGO 的血压目标
 
 ## 智能体如何加载
 
-根目录 `SKILL.md` 是唯一完整入口。`.agents/` 和 `.claude/` 里只有指向根目录的短入口，避免把同一套医学资料复制两份。
+根目录 `SKILL.md` 是唯一完整入口。`.agents/` 和 `.claude/` 里只有指向根目录的短入口，供本机智能体加载，已加入 `.gitignore`，不进入仓库。
 
 换一个智能体使用时，请同时复制 `SKILL.md`、`references/` 和 `examples/`，并保持相对路径不变。
 
@@ -84,8 +84,6 @@ hypertension-care-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── LICENSE
-├── .agents/skills/hypertension-care-skill/SKILL.md
-├── .claude/skills/hypertension-care-skill/SKILL.md
 ├── references/                       # 指南、药物、合并症、生活、老年、急救、随访
 ├── examples/                         # 回答示例与虚构档案
 └── hypertension-care-records/        # 本地档案，除 README 外不提交
@@ -97,7 +95,6 @@ hypertension-care-skill/
 | `references/` | 需要时才阅读的医学与管理资料。 |
 | `examples/` | 回答结构和虚构档案，不是真实患者。 |
 | `hypertension-care-records/` | 每位患者一个昵称目录。 |
-| `.agents/`、`.claude/` | 让从这两个目录加载技能的智能体回到根目录 `SKILL.md`。 |
 
 ## 医学来源
 
