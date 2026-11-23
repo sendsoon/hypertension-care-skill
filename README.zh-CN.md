@@ -8,7 +8,9 @@
 
 技能正文和参考资料是英文，便于工作流稳定。和患者对话时使用患者正在使用的语言。患者档案用英文写。
 
-本仓库还没有对外发布的安装名。`skills-lock.json` 只标明这是本地技能，没有虚构上游提交号。
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
 
 ## 技能做什么
 
@@ -40,11 +42,46 @@ WHO、ISH、ESC、AHA/ACC、中国高血压防治指南和 KDIGO 的血压目标
 
 不要用它为儿童套用成人方案，不要用它放行高强度运动，不要在胸痛、呼吸困难、意识改变、突发肢体无力或言语障碍时继续常规问答。中国大陆医疗急救电话是 120，其他地区使用当地急救电话。
 
-## 智能体如何加载
+## 安装
 
-根目录 `SKILL.md` 是唯一完整入口。`.agents/` 和 `.claude/` 里只有指向根目录的短入口，供本机智能体加载，已加入 `.gitignore`，不进入仓库。
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
 
-换一个智能体使用时，请同时复制 `SKILL.md`、`references/` 和 `examples/`，并保持相对路径不变。
+也可克隆本仓库，把 `SKILL.md`、`references/`、`examples/` 复制到所用智能体的 skills 目录，并保持相对路径不变。
+
+安装后，目录页由 [skills.sh](https://skills.sh/) 在收到遥测后展示。
+
+本仓库里的 `.agents/` 和 `.claude/` 只是本机入口，已加入 `.gitignore`，不会随安装发布。
+
+## 如何更新技能
+
+若当初用 Skills CLI 安装，从 GitHub 拉取最新的 `SKILL.md`：
+
+```bash
+npx skills check
+npx skills update hypertension-care-skill
+```
+
+`check` 只检查是否有新版本。`update` 会把本技能重装到原先那些智能体。要更新本机已安装的全部技能：
+
+```bash
+npx skills update
+```
+
+跳过确认提示：
+
+```bash
+npx skills update hypertension-care-skill -y
+```
+
+再执行一次安装命令也会覆盖为最新文件：
+
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
+
+若是手动复制安装的，先 `git pull` 本仓库，再把 `SKILL.md`、`references/`、`examples/` 覆盖到原来的 skills 目录。
 
 ## 用法
 

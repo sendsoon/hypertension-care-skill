@@ -10,7 +10,9 @@ Use this skill when the person asks about blood pressure, antihypertensive medic
 
 This skill does **not** diagnose, prescribe, stop, or change a dose, and it does **not** replace a clinician, a test, or emergency services.
 
-There is no remote install name yet. The canonical skill is `SKILL.md` at the repository root. `skills-lock.json` marks the skill as local and does not claim a published commit.
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
 
 ## What this skill does
 
@@ -40,11 +42,46 @@ Use it for hypertension, home blood pressure, understanding a medicine already p
 
 Do not use it to choose a drug or a dose, to clear a person for intense exercise, to manage a child as if they were an adult, or to delay emergency care. In mainland China the public medical emergency number is 120. Elsewhere, use the local emergency number.
 
-## How an agent should load it
+## Install
 
-The root `SKILL.md` is the source of truth. `.agents/skills/hypertension-care-skill/SKILL.md` and `.claude/skills/hypertension-care-skill/SKILL.md` are local pointers so agents that look in those folders still reach the root file and `references/`. They are gitignored and are not part of the published tree.
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
 
-To use the files inside another agent, copy `SKILL.md`, `references/`, and `examples/` together and keep their relative paths.
+Or clone the repository and copy `SKILL.md`, `references/`, and `examples/` into your agent's skills directory. Keep those relative paths.
+
+The [skills.sh](https://skills.sh/) catalog page updates after install telemetry arrives.
+
+`.agents/` and `.claude/` in this repository are local pointers for agents that look in those folders. They are gitignored and are not part of the install.
+
+## Update the skill
+
+If you installed with the Skills CLI, pull the latest `SKILL.md` from GitHub:
+
+```bash
+npx skills check
+npx skills update hypertension-care-skill
+```
+
+`check` only reports whether a newer hash exists. `update` reinstalls this skill into the same agents as before. To refresh every installed skill:
+
+```bash
+npx skills update
+```
+
+Skip the confirm prompt with `-y`:
+
+```bash
+npx skills update hypertension-care-skill -y
+```
+
+Re-running the install command also refreshes the files:
+
+```bash
+npx skills add sendsoon/hypertension-care-skill
+```
+
+If you copied files by hand, `git pull` this repository and copy `SKILL.md`, `references/`, and `examples/` over the previous copy.
 
 ## Usage
 
