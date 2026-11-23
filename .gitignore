@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Local reading copies (not published)
+SKILL.zh-CN.md
+examples/*.zh-CN.md
+references/*.zh-CN.md
+
+# Patient records and consultation logs (never publish)
+# The folder README is the only tracked file. It contains no patient data.
+hypertension-care-records/*
+!hypertension-care-records/README.md

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "skills": {
+    "hypertension-care-skill": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "SKILL.md"
+    }
+  }
+}

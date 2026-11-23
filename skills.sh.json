@@ -1,0 +1,11 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Health management",
+      "description": "Long-term, safety-bounded home support for adults living with hypertension. Not a diagnosis or a prescription.",
+      "skills": ["hypertension-care-skill"]
+    }
+  ]
+}
